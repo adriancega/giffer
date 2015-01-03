@@ -1,0 +1,6 @@
+# Development
+/env
+/node_modules
+
+# Gulp minify and compiler
+/static
