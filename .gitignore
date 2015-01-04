@@ -1,6 +1,7 @@
 # Development
 /env
 /node_modules
+npm-debug.log
 
 # Gulp minify and compiler
 /static
