@@ -1,0 +1,45 @@
+
+
+// main.sass
+// main style file
+
+$size-mobile: 320px
+$size-tablet: 660px
+$size-desktop: 950px
+$size-large: 1050px
+
+
+// @import "mixins.scss"
+@import "bourbon/bourbon"
+@import "neat/neat"
+
+
+$mobile: new-breakpoint(min-width $size-mobile 4)
+$tablet: new-breakpoint(min-width $size-tablet 8)
+$desktop: new-breakpoint(min-width $size-desktop 12)
+$large: new-breakpoint(min-width $size-large 12)
+
+
+body
+  padding: 50px
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+
+
+a
+  color: #00B7FF
+
+
+@include media($mobile)
+
+  #app
+    background-color: #131313
+
+@include media($tablet)
+
+  #app
+    background-color: #F314E3
+
+@include media($desktop)
+
+  #app
+    background-color: #313131

@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>{{title}}</title>
+	<title>{% block title %}{% endblock %}</title>
 	<link rel="stylesheet" href="stylesheets/style.css">
-	<link rel="stylesheet" href="static/css/style.css">
-	<script src="static/app.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
-	{% block content %}{% endblock %}	
+	<div id="app">
+
+		<header>
+			<nav>
+				<ul></ul>
+			</nav>
+		</header>
+
+		<div id="main-content">
+			{% block content %}{% endblock %}
+		</div>
+
+	</div>
 </body>
 </html>

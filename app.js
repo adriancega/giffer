@@ -1,3 +1,8 @@
+
+/*
+ * app.js
+ */
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -25,13 +30,19 @@ nunjucks.configure( 'views', {
     express: app
 });
 
+// Make our db accesible to our router
+app.use( function( req, res, next ) {
+    req.db = db;
+    next();
+});
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use( logger( 'dev' ));
 app.use( bodyParser.json());
 app.use( bodyParser.urlencoded({ extended: false }));
 app.use( cookieParser());
-app.use( express.static( path.join( __dirname, 'public')));
+app.use( express.static( path.join( __dirname, 'public' )));
 
 app.use('/', routes);
 app.use('/users', users);
@@ -68,4 +79,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-    

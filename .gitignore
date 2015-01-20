@@ -3,6 +3,9 @@
 /node_modules
 npm-debug.log
 /data
+assets/stylesheets/bourbon
+assets/stylesheets/neat
+assets/stylesheets/base
 
 # Gulp minify and compiler
 /static

@@ -1,6 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
 <h1>{{title}}</h1>
 <p>Welcome to #{{title}}</p>
+
+{% for giffer in giffers %}
+<h1>{{giffer.title}}</h1>
+<img src="{{giffer.image}}" alt="">
+{% endfor %}
+
 {% endblock %}
