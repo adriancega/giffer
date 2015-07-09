@@ -1,4 +1,5 @@
 # Development
+.emacs.*
 /env
 /node_modules
 npm-debug.log
